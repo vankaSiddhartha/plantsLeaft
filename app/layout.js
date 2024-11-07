@@ -1,11 +1,14 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./components/menu"; // Import your Navbar component
 
+// Load fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -23,7 +26,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* Navbar should be outside of the content */}
+        <Navbar />
+
+        <div className="content mt-14">
+          {children}
+        </div>
       </body>
     </html>
   );
