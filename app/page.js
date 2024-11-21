@@ -4,6 +4,8 @@ import { Upload, Loader, Leaf, AlertTriangle, FileCheck, ShieldCheck } from 'luc
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Home, MessageCircle, Map, Cloud } from 'lucide-react';
 import NavigationBar from './components/menu';
+import Navbar from './components/menu';
+
 const AnalysisCard = ({ icon: Icon, title, content, color }) => (
   <div className="bg-white/90 p-6 rounded-xl shadow-md border border-gray-100">
     <div className="flex items-start space-x-4">
@@ -222,9 +224,12 @@ Please provide specific, detailed information for each section.`;
   };
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100">
-
-      <div className="max-w-4xl mx-auto p-6 space-y-8">
+<div className="hidden md:block">
+          <Navbar />
+        </div>
+      <div className="max-w-4xl mx-auto p-6 space-y-8 mt-0 md:mt-16">
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold text-gray-800">
             Plant Disease Detection

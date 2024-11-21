@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-
+import Navbar from '../components/menu';
 const DiseaseMap = () => {
   const [diseases, setDiseases] = useState([]);
 
@@ -67,8 +67,13 @@ const DiseaseMap = () => {
   };
 
   return (
+    <>
+       
     <div className="p-4 bg-gray-100 min-h-screen">
-      <div className="max-w-6xl mx-auto">
+       <div className="hidden md:block">
+          <Navbar />
+        </div>
+      <div className="max-w-6xl mx-auto mt-0 md:mt-16">
         <h1 className="text-2xl font-bold mb-4">India Plant Disease Monitor</h1>
 
         {/* Legend */}
@@ -137,6 +142,7 @@ const DiseaseMap = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

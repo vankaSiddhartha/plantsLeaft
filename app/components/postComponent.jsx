@@ -5,6 +5,7 @@ import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, updateDoc } 
 import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
 import { Pencil, Trash2, Loader, Image as ImageIcon, Plus, X } from 'lucide-react';
 import firebaseConfig from '@/firebase.config';
+import Navbar from '../components/menu';
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -119,7 +120,10 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-emerald-50">
-      <div className="max-w-5xl mx-auto px-4 py-12">
+          <div className="hidden md:block">
+          <Navbar />
+        </div>
+      <div className="max-w-5xl mx-auto px-4 py-12  mt-0 md:mt-16">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-emerald-800">Farmers Network</h1>

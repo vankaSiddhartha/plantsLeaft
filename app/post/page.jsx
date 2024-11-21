@@ -19,6 +19,7 @@ import dynamic from 'next/dynamic';
 const page = () => {
   return (
     <div>
+    
       <Component/>
     </div>
   )

@@ -27,9 +27,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Navbar should be outside of the content */}
-        <Navbar />
+    
 
-        <div className="content mt-14">
+
+        <div className="content ">
           {children}
         </div>
       </body>
