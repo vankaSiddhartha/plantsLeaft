@@ -68,31 +68,30 @@ const DiseaseMap = () => {
 
   return (
     <>
-       
-    <div className="p-4 bg-gray-100 min-h-screen">
+    <div className="p-4 bg-gray-100 min-h-screen text-black">
        <div className="hidden md:block">
           <Navbar />
         </div>
       <div className="max-w-6xl mx-auto mt-0 md:mt-16">
-        <h1 className="text-2xl font-bold mb-4">India Plant Disease Monitor</h1>
+        <h1 className="text-2xl font-bold mb-4 text-black">India Plant Disease Monitor</h1>
 
         {/* Legend */}
-        <div className="flex gap-4 mb-6 flex-wrap">
+        <div className="flex gap-4 mb-6 flex-wrap text-black">
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-yellow-400"></div>
-            <span>Low Severity (0-25%)</span>
+            <span className="text-black">Low Severity (0-25%)</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-orange-400"></div>
-            <span>Medium Severity (26-50%)</span>
+            <span className="text-black">Medium Severity (26-50%)</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-orange-600"></div>
-            <span>High Severity (51-75%)</span>
+            <span className="text-black">High Severity (51-75%)</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-red-600"></div>
-            <span>Critical Severity (76-100%)</span>
+            <span className="text-black">Critical Severity (76-100%)</span>
           </div>
         </div>
 
@@ -104,7 +103,7 @@ const DiseaseMap = () => {
               className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow"
             >
               <div className="flex items-center justify-between mb-2">
-                <h3 className="text-lg font-bold">{item.name}</h3>
+                <h3 className="text-lg font-bold text-black">{item.name}</h3>
                 <div
                   className="w-6 h-6 rounded-full"
                   style={{ backgroundColor: getSeverityColor(item.severity) }}
@@ -112,16 +111,16 @@ const DiseaseMap = () => {
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Disease:</span>
-                  <span className="font-medium">{item.disease}</span>
+                  <span className="text-black">Disease:</span>
+                  <span className="font-medium text-black">{item.disease}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Severity:</span>
-                  <span className="font-medium">{item.severity}%</span>
+                  <span className="text-black">Severity:</span>
+                  <span className="font-medium text-black">{item.severity}%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Affected Area:</span>
-                  <span className="font-medium">{item.affectedArea} hectares</span>
+                  <span className="text-black">Affected Area:</span>
+                  <span className="font-medium text-black">{item.affectedArea} hectares</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                   <div
@@ -137,7 +136,7 @@ const DiseaseMap = () => {
           ))}
         </div>
 
-        <div className="mt-6 text-sm text-gray-600 text-center">
+        <div className="mt-6 text-sm text-black text-center">
           Data updates every minute • Last updated: {new Date().toLocaleString()}
         </div>
       </div>
