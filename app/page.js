@@ -151,7 +151,7 @@ const PlantDiseaseDetection = () => {
       setLoading(true);
       setError('');
 
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
       // Convert image to correct format for Gemini
       const imageData = await fileToGenerativePart(image);
